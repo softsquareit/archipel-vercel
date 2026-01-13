@@ -34,7 +34,7 @@ const Card: React.FC<Omit<CardProps, 'title'> & { t: ReturnType<typeof useTransl
         {/* Icon display */}
         <h1 className={` text-[26px] md:text-[32px] m-1 ${isArabic ? 'ml-0 mr-1' : ''}`}>{icon}</h1>
         {/* Title display - now inline with the icon */}
-  <h2 className={`text-[26px] md:text-[32px] font-semibold text-gray-900 flex-grow ${isArabic ? 'font-arabic text-right' : 'font-title text-left'}`}>{t(`archipelMixSection.cards.${id}.title`)}</h2>
+        <h2 className={`text-[26px] md:text-[32px] font-semibold text-gray-900 flex-grow ${isArabic ? 'font-arabic text-right' : 'font-title text-left'}`}>{t(`archipelMixSection.cards.${id}.title`)}</h2>
       </div>
 
       {/* Main image display */}
@@ -69,7 +69,7 @@ const RhythmCard: React.FC<Omit<RhythmCardProps, 'title' | 'quote' | 'descriptio
         <div className={`rounded-full p-2 ${color} ${isArabic ? 'ml-3' : 'mr-3'}`}>
           <Image src={icon} width={36} height={36} alt={t(`rhythmSection.cards.${id}.title`)} />
         </div>
-  <h2 className={`text-2xl font-semibold text-gray-800 ${isArabic ? 'font-arabic' : 'font-title'}`}>{t(`rhythmSection.cards.${id}.title`)}</h2>
+        <h2 className={`text-2xl font-semibold text-gray-800 ${isArabic ? 'font-arabic' : 'font-title'}`}>{t(`rhythmSection.cards.${id}.title`)}</h2>
       </div>
       <p className={`text-xl  mb-5 ${color} bg-clip-text text-gray-900/25  font-bold`}>
         &quot;{t(`rhythmSection.cards.${id}.quote`)}&quot;
@@ -170,7 +170,7 @@ const Page = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="relative   mx-4 md:mx-auto mt-4 md:p-4 sm:p-8 rounded-2xl bg-cover bg-center text-center overflow-hidden"
+      <section className="relative   mx-4 md:mx-auto mt-4 md:p-4 sm:p-8 bg-cover bg-center text-center overflow-hidden"
         style={{ backgroundImage: 'url("/backgrounds/hero-map.jpg")' }}
       >
         {/* Overlay */}
@@ -195,7 +195,7 @@ const Page = () => {
             alt="Blue Vector pedagogy"
             width={400}
             height={1300}
-            style={{ 
+            style={{
               height: '300%', // Extends beyond section
               transform: isArabic ? 'scaleX(-1)' : ''
             }}
@@ -205,37 +205,37 @@ const Page = () => {
         {/* How it works section */}
         <section className={`flex max-md:flex-col    mt-6 mx-4 md:mx-auto relative ${isArabic ? 'md:flex-row-reverse' : ''}`}>
           <div className={`flex flex-col md:pr-16  gap-6 max-md:w-full w-1/2 relative z-10 text-center ${isArabic ? 'md:text-right' : 'md:text-left'}`}>
-          <h1
-            className={`font-semibold bg-gradient-to-r from-[#676DBD] to-[#529ED3] bg-clip-text text-transparent text-4xl ${isArabic ? 'font-arabic' : 'font-title'}`}
-          >
-            {t('howItWorksSection.titlePart1')} <br /> {t('howItWorksSection.titlePart2')}
-          </h1>
-          <p className='text-base sm:text-lg max-w-2xl text-gray-500'>
-            {t('howItWorksSection.description1')}
-          </p>
-          <ul className={`list-disc list-inside ${isArabic ? 'text-right' : 'text-center md:text-left'}`}>
-            <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet1')}</li>
-            <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet2')}</li>
-            <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet3')}</li>
-          </ul>
-          <p className='text-base  sm:text-lg max-w-2xl text-[#475569]'>
-            {t('howItWorksSection.description2')}
-          </p>
-          <button className={`bg-[#5d4089] text-white font-semibold py-3 px-6 max-md:mb-6 rounded-xl hover:bg-[#529ED3] transition w-fit self-center ${isArabic ? 'md:self-end' : 'md:self-start'}`}>
-            {t('howItWorksSection.buttonText')}
-          </button>
-        </div>
-        
-        <div className='flex justify-center items-center rounded-2xl max-md:w-full w-1/2 relative z-10'>
-          {/* Classroom image */}
-          <Image 
-            src="/images/classroom.png" 
-            alt={t('howItWorksSection.imageAlt')} 
-            width={628} 
-            height={428}
-            className='relative z-10'
-          />
-        </div>
+            <h1
+              className={`font-semibold bg-gradient-to-r from-[#676DBD] to-[#529ED3] bg-clip-text text-transparent text-4xl ${isArabic ? 'font-arabic' : 'font-title'}`}
+            >
+              {t('howItWorksSection.titlePart1')} <br /> {t('howItWorksSection.titlePart2')}
+            </h1>
+            <p className='text-base sm:text-lg max-w-2xl text-gray-500'>
+              {t('howItWorksSection.description1')}
+            </p>
+            <ul className={`list-disc list-inside ${isArabic ? 'text-right' : 'text-center md:text-left'}`}>
+              <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet1')}</li>
+              <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet2')}</li>
+              <li className='text-base sm:text-lg max-w-2xl text-gray-500 mx-auto'>{t('howItWorksSection.bullet3')}</li>
+            </ul>
+            <p className='text-base  sm:text-lg max-w-2xl text-[#475569]'>
+              {t('howItWorksSection.description2')}
+            </p>
+            <button className={`bg-[#5d4089] text-white font-semibold py-3 px-6 max-md:mb-6 rounded-xl hover:bg-[#529ED3] transition w-fit self-center ${isArabic ? 'md:self-end' : 'md:self-start'}`}>
+              {t('howItWorksSection.buttonText')}
+            </button>
+          </div>
+
+          <div className='flex justify-center items-center rounded-2xl max-md:w-full w-1/2 relative z-10'>
+            {/* Classroom image */}
+            <Image
+              src="/images/classroom.png"
+              alt={t('howItWorksSection.imageAlt')}
+              width={628}
+              height={428}
+              className='relative z-10'
+            />
+          </div>
         </section>
       </div>
 
@@ -255,7 +255,7 @@ const Page = () => {
       <section className={`relative flex flex-col lg:grid-cols-2 md:min-h-screen   lg:snap-y lg:snap-mandatory lg:snap-normal lg:snap-center mx-auto h-fit overflow-x-clip`}>
         {/* Left column: responsive positioning */}
         <div className={` w-full lg:w-1/2 p-4 sm:p-6 lg:sticky lg:top-0 max-h-[50vh] md:min-h-[90vh] flex flex-col gap-4 sm:gap-6 justify-center z-10 ${isArabic ? 'text-right' : 'text-left'}`}>
-          <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight ${isArabic ? 'font-arabic' : 'font-title'}`}> 
+          <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4 leading-tight ${isArabic ? 'font-arabic' : 'font-title'}`}>
             {t('archipelMixSection.titlePart1')} <br />
             {t('archipelMixSection.titlePart2')} <br />
             {t('archipelMixSection.titlePart3')}
@@ -267,33 +267,33 @@ const Page = () => {
             {t('archipelMixSection.buttonText')}
           </button>
         </div>
-      
-      {/* Mobile: Cards below text, Desktop: Cards beside text */}
-      <div className='w-full lg:flex lg:justify-end lg:-mt-[85vh]'>
-        {/* Right column: responsive card container */}
-        <div className=' w-full lg:w-1/2 mt-8 lg:mt-0 relative top-0 flex flex-col gap-8 lg:gap-16 right-0'>
-          {/* Background yellow vector */}
-          <Image
-            src="/images/verticalvector.png"
-            className='absolute top-50 z-0 object-cover w-full'
-            alt="Yellow Vector"
-            width={600}
-            height={400}
-          />
 
-          {cardData.map((card, index) => {
-            const rotateClass = index % 2 === 0 ? 'rotate-[-10deg]' : 'rotate-[10deg]';
-            return (
-              <div
-                key={index}
-                className={`relative z-10 flex items-center justify-center p-2 sm:p-6 lg:p-0 ${rotateClass}`}
-              >
-                <Card {...card} t={t} isArabic={isArabic} />
-              </div>
-            );
-          })}
+        {/* Mobile: Cards below text, Desktop: Cards beside text */}
+        <div className='w-full lg:flex lg:justify-end lg:-mt-[85vh]'>
+          {/* Right column: responsive card container */}
+          <div className=' w-full lg:w-1/2 mt-8 lg:mt-0 relative top-0 flex flex-col gap-8 lg:gap-16 right-0'>
+            {/* Background yellow vector */}
+            <Image
+              src="/images/verticalvector.png"
+              className='absolute top-50 z-0 object-cover w-full'
+              alt="Yellow Vector"
+              width={600}
+              height={400}
+            />
+
+            {cardData.map((card, index) => {
+              const rotateClass = index % 2 === 0 ? 'rotate-[-10deg]' : 'rotate-[10deg]';
+              return (
+                <div
+                  key={index}
+                  className={`relative z-10 flex items-center justify-center p-2 sm:p-6 lg:p-0 ${rotateClass}`}
+                >
+                  <Card {...card} t={t} isArabic={isArabic} />
+                </div>
+              );
+            })}
+          </div>
         </div>
-</div>
       </section>
 
       {/* ILONA section */}

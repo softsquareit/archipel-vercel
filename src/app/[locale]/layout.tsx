@@ -65,7 +65,7 @@ export default async function RootLayout({
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${lexendDeca.className} ${bricolageGrotesque.variable} ${ibmPlexSansArabic.className} flex flex-col min-h-screen bg-[#F9FAFB]`}>
           <Navbar />
-          <main className="flex-grow mt-24">{children}</main>
+          <main className="flex-grow mt-4">{children}</main>
           <ContactBubble />
           <Footer />
         </body>

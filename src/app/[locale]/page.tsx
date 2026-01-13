@@ -15,36 +15,23 @@ import Image from 'next/image'
 import { useLocale } from "next-intl";
 import NosCentres from '@/sections/NosCentres'
 
-
-
-
-
-
 const Page = () => {
-      const locale = useLocale();
-      const isArabic = locale === 'ar';
+  const locale = useLocale();
+  const isArabic = locale === 'ar';
   return (
-    <div className={`md:pt-12 ${isArabic?'!font-arabic':''} `}>
+    <div className={`md:pt-12 ${isArabic ? '!font-arabic' : ''} `}>
       <Hero />
-
       {/* Mission */}
       <Mission />
-
-
       <GridSection />
-
-
-
       <div className={`relative max-lg:flex max-lg:flex-col max-md:overflow-hidden max-lg:h-fit ${isArabic ? '!font-arabic' : ''}`}>
-                   <Image
-               src={"/images/bluevector.png"}
-               width={600}
-               height={2000}
-               alt="blue vector"
-
-            className={`2xl:visible absolute  top-40 object-cover left-10     w-[492px] -z-20 -rotate-3 invisible md:block rounded-full ${isArabic ? 'right-20 translate-x-1/2' : 'left-20 -translate-x-1/2'}`}
-
-           />
+        <Image
+          src={"/images/bluevector.png"}
+          width={600}
+          height={2000}
+          alt="blue vector"
+          className={`2xl:visible absolute  top-40 object-cover left-10     w-[492px] -z-20 -rotate-3 invisible md:block rounded-full ${isArabic ? 'right-20 translate-x-1/2' : 'left-20 -translate-x-1/2'}`}
+        />
         <Online />
 
         <Onsite />
@@ -53,38 +40,15 @@ const Page = () => {
       </div>
       <Testimonials />
       <VideoTestimonialCarousel />
-      <PartnersSection  />
+      <PartnersSection />
       <Courses />
       <HomeContact />
       <div className='max-md:hidden'>
-
-      <Locations />
+        <Locations />
       </div>
       <div className='md:hidden'>
-
-      <NosCentres />
+        <NosCentres />
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   )
 }

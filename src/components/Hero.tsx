@@ -99,16 +99,16 @@ function HeroFooter() {
 function HeroTitle({ isArabic }: { isArabic: boolean }) {
   const t = useTranslations('hero'); // Scope translations to 'hero'
   return (
-    <div className={`text-center  text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold ${isArabic ? '!font-arabic' : 'font-title gap-4'}`}>
-      <span className="bg-gradient-to-r from-[#676DBD] to-[#529ED3] bg-clip-text text-transparent ">
+    <div className={`text-center  text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold ${isArabic ? '!font-arabic' : 'font-title gap-4'}`}>
+      <div className="bg-gradient-to-r from-[#676DBD] to-[#529ED3] bg-clip-text text-transparent mb-5">
         {t('title1')}
-      </span>
-      <p className={
-          'bg-gradient-to-r from-[#7350B0] to-[#55BDE1] bg-clip-text text-transparent pb-4'
-        }
+      </div>
+      <div className={
+        'bg-gradient-to-r from-[#7350B0] to-[#55BDE1] bg-clip-text text-transparent pb-4'
+      }
       >
         {t('title2')}
-      </p>
+      </div>
     </div>
   );
 }
@@ -171,17 +171,17 @@ function Student({ student, featureCardTitle, featureCardDescription }: StudentP
 
 function Hero() {
   const locale = useLocale();
-const isArabic = locale === 'ar';
+  const isArabic = locale === 'ar';
   return (
-    <div className="relative h-fit overflow-hidden py-18 max-md:m-4   md:mx-auto rounded-xl p-4 bg-[#f2eefa]  ">
+    <div className="relative h-fit overflow-hidden py-18 max-md:m-4 md:mx-auto p-4 bg-[#f2eefa]  ">
       {/* background */}
       <div className="absolute inset-0 bg-[url('/backgrounds/hero-map.png')] mix-blend-hard-light   z-0 " />
 
       {/* content */}
       <div className="relative z-10 flex flex-col justify-center items-center gap-5 h-full text-center">
-<HeroTitle isArabic={isArabic} />
-<HeroBody  />
-<HeroFooter  />
+        <HeroTitle isArabic={isArabic} />
+        <HeroBody />
+        <HeroFooter />
       </div>
     </div>
   );

@@ -257,10 +257,10 @@ const Page = () => {
   return (
     <>
       {/* Hero section */}
-      <section className="relative mx-4 md:mx-auto mt-4 sm:p-8 rounded-2xl overflow-hidden text-center">
+      <section className="relative mx-4 md:mx-auto mt-4 sm:p-8 overflow-hidden text-center">
         {/* Background image layer with controlled opacity */}
         <div 
-          className="absolute inset-0 bg-cover bg-center rounded-2xl z-20"
+          className="absolute inset-0 bg-cover bg-center z-20"
           style={{ 
             backgroundImage: 'url("/backgrounds/hero-map.jpg")',
             opacity: 0.3, // Only the background image opacity
@@ -269,7 +269,7 @@ const Page = () => {
         ></div>
         
         {/* Dark overlay layer (separate from background image) */}
-        <div className="absolute inset-0 bg-[#4a3370] z-10 rounded-2xl"></div>
+        <div className="absolute inset-0 bg-[#4a3370] z-10"></div>
 
         {/* Content */}
         <div className="relative z-20 flex flex-col justify-center items-center gap-5 text-white px-4 py-8 md:py-12">

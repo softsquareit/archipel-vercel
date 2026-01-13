@@ -40,46 +40,46 @@ const HomeContact: React.FC = () => {
                 href="mailto:contact@archipelmix.com"
                 className="text-[#94a3b8] font-semibold text-xl hover:underline transition duration-300"
               >
-                contact@archipelmix.com 
+                contact@archipelmix.com
               </a>
             </div>
           </div>
 
           {/* Right Section - Contact Form */}
-        
-        <div className='lg:w-1/2 h-full flex flex-col items-end justify-center px-2'>
+
+          <div className='lg:w-1/2 h-full flex flex-col items-end justify-center px-2'>
             <div className={`p-3 sm:p-4 lg:p-8 bg-[#F1EDFA] mx-auto rounded-2xl m-2 sm:m-4 flex flex-col justify-center h-full w-full ${isArabic ? 'text-right' : 'text-left'}`}>
-            <h3 className={`max-md:text-left text-2xl sm:text-2xl lg:text-5xl font-bold text-gray-900 mb-2  ${isArabic ? 'text-center lg:text-right' : 'text-center lg:text-left font-title'}`}>
-              {t('formTitle')} {/* Translated form title */}
-            </h3>
-            <p className={`max-md:text-left text-gray-800 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base lg:text-lg ${isArabic ? 'text-center lg:text-right' : 'text-center lg:text-left'}`}>
-              {t('formDescription')} {/* Translated form description */}
-            </p>
-            <form className="space-y-2 w-full">
-              <div>
-                <input
-                  type="text"
-                  placeholder={t('namePlaceholder')} 
-                  className={`w-full px-4 py-2 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200 ${isArabic ? 'text-right' : 'text-left'}`}
-                />
-              </div>
-              <div>
-                <div className="relative">
-                  <span className={`absolute top-1/2 transform -translate-y-1/2 text-gray-500 ${isArabic ? 'right-3' : 'left-3'}`}>
-                    🇹🇳 {/* Flag emoji remains static */}
-                  </span>
-                  <PhoneInputDiv/>
+              <h3 className={`max-md:text-left text-2xl sm:text-2xl lg:text-5xl font-bold text-gray-900 mb-2  ${isArabic ? 'text-center lg:text-right' : 'text-center lg:text-left font-title'}`}>
+                {t('formTitle')} {/* Translated form title */}
+              </h3>
+              <p className={`max-md:text-left text-gray-800 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base lg:text-lg ${isArabic ? 'text-center lg:text-right' : 'text-center lg:text-left'}`}>
+                {t('formDescription')} {/* Translated form description */}
+              </p>
+              <form className="space-y-2 w-full">
+                <div>
+                  <input
+                    type="text"
+                    placeholder={t('namePlaceholder')}
+                    className={`w-full px-4 py-2 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200 ${isArabic ? 'text-right' : 'text-left'}`}
+                  />
                 </div>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#5d4089] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#7b5aa6] cursor-pointer transition duration-300 shadow-md"
-              >
-                {t('submitButton')} {/* Translated submit button */}
-              </button>
-            </form>
+                <div>
+                  <div className="relative">
+                    <span className={`absolute top-1/2 transform -translate-y-1/2 text-gray-500 ${isArabic ? 'right-3' : 'left-3'}`}>
+                      🇹🇳 {/* Flag emoji remains static */}
+                    </span>
+                    <PhoneInputDiv />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#5d4089] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#7b5aa6] cursor-pointer transition duration-300 shadow-md"
+                >
+                  {t('submitButton')} {/* Translated submit button */}
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

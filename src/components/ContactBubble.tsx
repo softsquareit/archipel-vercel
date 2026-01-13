@@ -2,10 +2,11 @@
 
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const ContactBubble = () => {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <div className="max-md:hidden fixed bottom-4 right-4 z-50 flex items-end gap-2">
@@ -13,8 +14,17 @@ const ContactBubble = () => {
       <div className="bg-white rounded-2xl shadow-md border rounded-br-none  border-gray-200 px-4 py-2 max-w-xs text-sm">
         <p className="text-gray-700 font-light text-xl">{t('contactBubble.availableText')}</p>
         <div className="mt-1 bg-[#5d4089] hover:bg-[#7B5AA6] text-white font-semibold px-3 py-1.5 rounded-xl inline-flex items-center gap-2 cursor-pointer">
-          <Phone size={24} className="text-white " />
-          <span className="text-lg font-light">{t('contactBubble.phoneNumber')}</span>
+          {locale === 'fr' ? (
+            <>
+              <Phone size={24} className="text-white " />
+              <span className="text-lg font-light">{t('contactBubble.phoneNumber')}</span>
+            </>
+          ) : (
+            <>
+              <span className="text-lg font-light">{t('contactBubble.phoneNumber')}</span>
+              <Phone size={24} className="text-white " />
+            </>
+          )}
         </div>
       </div>
 

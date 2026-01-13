@@ -19,7 +19,7 @@ const Online = () => {
     const locale = useLocale();
     const isArabic = locale === 'ar';
 
-    return(
+    return (
         <section className={`relative md:pt-20 px-4 md:px-16  mt-8 mb-8  z-20 lg:h-[100vh] lg:sticky md:top-5 ${isArabic ? 'text-right' : 'text-left'}`} style={{ direction: isArabic ? 'rtl' : 'ltr' }}>
             {/* Smooth vertical path between cards */}
             <Image
@@ -38,7 +38,7 @@ const Online = () => {
             />
 
 
-        
+
 
             <div
                 className=' bg-[#f9f7fd] grid grid-cols-1 md:grid-cols-5 gap-2   mx-auto border-gray-300 border-2 rounded-2xl py-6 px-4 md:px-16'>
